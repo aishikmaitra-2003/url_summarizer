@@ -17,4 +17,5 @@ COPY . .
 EXPOSE 8501
 
 # Run app properly
-CMD ["streamlit", "run", "yt_tester.py", "--server.port=8501", "--server.address=0.0.0.0"]
+# CMD ["streamlit", "run", "yt_tester.py", "--server.port=8501", "--server.address=0.0.0.0"]
+CMD ["sh", "-c", "streamlit run lang_summarizer.py --server.port=$PORT --server.address=0.0.0.0"]
